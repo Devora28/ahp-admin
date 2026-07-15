@@ -31,6 +31,7 @@
 
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/colors/color1.css" />
+
 </head>
 
 <body class="app sidebar-mini ltr light-mode">
@@ -574,9 +575,9 @@
                                             <li><a href="terms.html" class="sub-slide-item"> Terms</a></li>
                                             <li><a href="invoice.html" class="sub-slide-item"> Invoice</a></li>
                                             <li><a href="pricing.html" class="sub-slide-item"> Pricing Tables</a></li>
-                                            <li><a href="settings.html" class="sub-slide-item"> Settings</a></li>
-                                            <li><a href="blog.html" class="sub-slide-item"> Blog</a></li>
-                                            <li><a href="blog-details.html" class="sub-slide-item"> Blog Details</a></li>
+                                            <li><a href="settings.blade.php" class="sub-slide-item"> Settings</a></li>
+                                            <li><a href="blog.blade.php" class="sub-slide-item"> Blog</a></li>
+                                            <li><a href="blog-details.blade.php" class="sub-slide-item"> Blog Details</a></li>
                                             <li><a href="blog-post.html" class="sub-slide-item"> Blog Post</a></li>
                                             <li><a href="empty.html" class="sub-slide-item"> Empty Page</a></li>
                                             <li><a href="construction.html" class="sub-slide-item"> Under Construction</a></li>
@@ -706,8 +707,8 @@
                         <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"/></svg></div>
                     </div>
                 </div>
+                <!--/APP-SIDEBAR-->
             </div>
-            <!--/APP-SIDEBAR-->
 
             <!--app-content open-->
             <div class="main-content app-content mt-0">
@@ -718,227 +719,136 @@
 
                         <!-- PAGE-HEADER -->
                         <div class="page-header">
-                            <h1 class="page-title">Settings</h1>
+                            <h1 class="page-title">Blog Post</h1>
                             <div>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Blog Post</li>
                                 </ol>
                             </div>
                         </div>
                         <!-- PAGE-HEADER END -->
 
-                        <!-- ROW-1 OPEN -->
-
-                        <!-- Row -->
-                        <div class="row ">
-                            <div class="col-lg-6 col-xl-3">
+                        <div class="row">
+                            <div class="col-xl-8">
                                 <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Add New Post</div>
+                                    </div>
                                     <div class="card-body">
-                                        <div class="list-group list-group-transparent mb-0 file-manager file-manager-border">
-                                            <h4>General</h4>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0 border-top">
-                                                    <i class="fe fe-user fs-18 me-2 text-success p-2"></i>Account
-                                                </a>
+                                        <div class="row mb-4">
+                                            <label class="col-md-3 form-label">Post Title :</label>
+                                            <div class="">
+                                                <input type="text" class="form-control" value="Typing.....">
                                             </div>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0">
-                                                    <i class="fe fe-bell fs-18 me-2 text-secondary p-2"></i>Notifications
-                                                </a>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label class="col-md-3 form-label">Categories :</label>
+                                            <div class="">
+                                                <select name="country" class="form-control form-select select2" data-bs-placeholder="Select Country">
+                                                    <option value="br">Technology</option>
+                                                    <option value="cz">Travel</option>
+                                                    <option value="de">Food</option>
+                                                    <option value="pl">Fashion</option>
+                                            </select>
                                             </div>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0">
-                                                    <i class="fe fe-eye fs-18 me-2 text-primary p-2"></i> Appearances
-                                                </a>
+                                        </div>
+
+                                        <!-- Row -->
+                                        <div class="row">
+                                            <label class="col-md-3 form-label mb-4">Post Description :</label>
+                                            <div class="mb-4">
+                                                <textarea class="content" name="example"></textarea>
                                             </div>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0">
-                                                    <i class="fe fe-lock fs-18 me-2 text-warning p-2"></i> Privacy & Security
-                                                </a>
+                                        </div>
+                                        <!--End Row-->
+
+                                        <div class="form-group mb-0">
+                                            <label class="col-md-3 form-label mb-4">File Upload :</label>
+                                            <input id="demo" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="javascript:void(0)" class="btn btn-primary">Post</a>
+                                        <a href="javascript:void(0)" class="btn btn-default float-end">Discard</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Recent Posts</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="">
+                                            <div class="d-flex overflow-visible">
+                                                <a href="blog-details.blade.php" class="card-aside-column br-5 cover-image" data-bs-image-src="../assets/images/media/19.jpg" style="background: url(&quot;../assets/images/media/19.jpg&quot;) center top;"></a>
+                                                <div class="ps-3 flex-column">
+                                                    <span class="badge bg-danger me-1 mb-1 mt-1">Lifestyle</span>
+                                                    <h4><a href="blog-details.blade.php">Generator on the Internet..</a></h4>
+                                                    <div class="text-muted">Excepteur sint occaecat cupidatat non proident, accusantium sunt in culpa qui officia deserunt mollit anim id est laborum....</div>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0">
-                                                    <i class="fe fe-headphones fs-18 me-2 text-info p-2"></i> Help & Support
-                                                </a>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <a href="blog-details.blade.php" class="card-aside-column br-5 cover-image" data-bs-image-src="../assets/images/media/22.jpg" style="background: url(&quot;../assets/images/media/19.jpg&quot;) center top;"></a>
+                                                <div class="ps-3 flex-column">
+                                                    <span class="badge bg-primary me-1 mb-1 mt-1">Business</span>
+                                                    <h4><a href="blog-details.blade.php">Voluptatem quia voluptas...</a></h4>
+                                                    <div class="text-muted">Excepteur sint occaecat cupidatat non proident, accusantium sunt in culpa qui officia deserunt mollit anim id est laborum....</div>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0">
-                                                    <i class="fe fe-database fs-18 me-2 text-pink p-2"></i> Data Usage Control
-                                                </a>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <a href="blog-details.blade.php" class="card-aside-column br-5 cover-image" data-bs-image-src="../assets/images/media/12.jpg" style="background: url(&quot;../assets/images/media/19.jpg&quot;) center top;"></a>
+                                                <div class="ps-3 flex-column">
+                                                    <span class="badge bg-secondary me-1 mb-1 mt-1">Travel</span>
+                                                    <h4><a href="blog-details.blade.php">Generator on the Internet..</a></h4>
+                                                    <div class="text-muted">Excepteur sint occaecat cupidatat non proident, accusantium sunt in culpa qui officia deserunt mollit anim id est laborum....</div>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0">
-                                                    <i class="fe fe-battery-charging fs-18 me-2 text-green p-2"></i> Power Saving Management
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a href="javascript:void(0);" class="list-group-item  d-flex align-items-center px-0">
-                                                    <i class="fe fe-help-circle fs-18 me-2 text-danger p-2"></i> About
-                                                </a>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <a href="blog-details.blade.php" class="card-aside-column br-5 cover-image" data-bs-image-src="../assets/images/media/25.jpg" style="background: url(&quot;../assets/images/media/19.jpg&quot;) center top;"></a>
+                                                <div class="ps-3 flex-column">
+                                                    <span class="badge bg-success me-1 mb-1 mt-1">Meeting</span>
+                                                    <h4><a href="blog-details.blade.php">Voluptatem quia voluptas...</a></h4>
+                                                    <div class="text-muted">Excepteur sint occaecat cupidatat non proident, accusantium sunt in culpa qui officia deserunt mollit anim id est laborum....</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-xl-9">
-                                <div class="row row-sm">
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-primary-transparent text-primary"><i class="fe fe-settings"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">General</h4>
-                                                        </a>
-                                                        <p>General settings such as, site title, logo, other general and advanced settings.</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Professional Blog Writers</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="">
+                                            <div class="d-flex overflow-visible">
+                                                <img class="avatar bradius avatar-xl me-3" src="../assets/images/users/12.jpg" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="profile.blade.php" class="fw-semibold text-dark">John Paige</a>
+                                                    <p class="text-muted mb-0">There are many variations of passages of Lorem Ipsum available ...</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-secondary-transparent text-secondary border-secondary"><i class="fe fe-home"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">Dashboard</h4>
-                                                        </a>
-                                                        <p>In this settings we can change sidemenu and main page can be Controlled.</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <img class="avatar bradius avatar-xl me-3" src="../assets/images/users/2.jpg" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="profile.blade.php" class="fw-semibold text-dark">Peter Hill</a>
+                                                    <p class="text-muted mb-0">There are many variations of passages of Lorem Ipsum available ...</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-danger-transparent text-danger border-danger"><i class="fe fe-bell"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">Notifications</h4>
-                                                        </a>
-                                                        <p>Notifications settings we can control the notifications privacy and security.</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <img class="avatar bradius avatar-xl me-3" src="../assets/images/users/9.jpg" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="profile.blade.php" class="fw-semibold text-dark">Irene Harris</a>
+                                                    <p class="text-muted mb-0">There are many variations of passages of Lorem Ipsum available ...</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-warning-transparent text-warning border-warning"><i class="fe fe-grid"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">Webapps</h4>
-                                                        </a>
-                                                        <p>Web apps settings such as Apps,Elements & Mail related to web apps can be Controlled.</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-success-transparent text-success border-success"><i class="fe fe-flag"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">Region & language</h4>
-                                                        </a>
-                                                        <p>Region & language settings we can Add, Delete and edit your Region & language.</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-pink-transparent text-pink border-pink"><i class="fe fe-cast"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">Blog</h4>
-                                                        </a>
-                                                        <p>Blog settings such as, enable blog, max mosts in page and more can be controlled.</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-info-transparent text-info border-info"><i class="fe fe-search"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">SEO</h4>
-                                                        </a>
-                                                        <p>Search Engine Optimization settings such as, meta tags and social media can be controlled..</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 col-xxl-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-xl-2 col-sm-2 col-md-12">
-                                                        <div class="mt-3 mb-5">
-                                                            <span class="settings-icon bg-danger-transparent text-orange border-orange"><i class="fe fe-mail"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-10 col-sm-10 col-md-12">
-                                                        <a href="javascript:void(0)">
-                                                            <h4 class="mb-1 text-dark">SMTP</h4>
-                                                        </a>
-                                                        <p>Email SMTP settings such as, contact us and others related to email can be controlled.</p>
-                                                        <a href="javascript:void(0)">Change Settings <i class="ion-chevron-right fs-10 ms-1"></i></a>
-                                                    </div>
+                                            <div class="d-flex overflow-visible mt-5">
+                                                <img class="avatar bradius avatar-xl me-3" src="../assets/images/users/4.jpg" alt="avatar-img">
+                                                <div class="media-body valign-middle">
+                                                    <a href="profile.blade.php" class="fw-semibold text-dark">Harry Fisher</a>
+                                                    <p class="text-muted mb-0">There are many variations of passages of Lorem Ipsum available ...</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -946,12 +856,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /Row -->
                     </div>
                     <!-- CONTAINER CLOSED -->
                 </div>
             </div>
-            <!--app-content open-->
+            <!--app-content closed-->
         </div>
 
         <!-- Sidebar-right -->
@@ -1476,6 +1385,24 @@
     <!-- BOOTSTRAP JS -->
     <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- INPUT MASK JS -->
+    <script src="../assets/plugins/input-mask/jquery.mask.min.js"></script>
+
+    <!-- INTERNAL WYSIWYG Editor JS -->
+    <script src="../assets/plugins/wysiwyag/jquery.richtext.js"></script>
+    <script src="../assets/plugins/wysiwyag/wysiwyag.js"></script>
+
+    <!-- INTERNAL File-Uploads Js-->
+    <script src="../assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+    <script src="../assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+    <script src="../assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+    <script src="../assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+    <script src="../assets/plugins/fancyuploder/fancy-uploader.js"></script>
+
+    <!-- INTERNAL SELECT2 JS -->
+    <script src="../assets/plugins/select2/select2.full.min.js"></script>
+    <script src="../assets/js/select2.js"></script>
 
     <!-- SIDE-MENU JS -->
     <script src="../assets/plugins/sidemenu/sidemenu.js"></script>

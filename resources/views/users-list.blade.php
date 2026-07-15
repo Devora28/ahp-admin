@@ -109,7 +109,7 @@
                                     <div class="mb-3">
                                         <i class="fe fe-package text-muted" style="font-size: 48px;"></i>
                                     </div>
-                                    <h5 class="mb-2 fw-semibold">سفارشی موجود نیست</h5>
+                                    <h5 class="mb-2 fw-semibold">لیست کاربران خالی است</h5>
                                     <p class="text-muted mb-0 px-3">
                                         در حال حاضر موردی برای نمایش در این بخش پیدا نشد.
                                     </p>

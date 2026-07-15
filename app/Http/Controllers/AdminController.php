@@ -16,7 +16,7 @@ class AdminController extends Controller{
         if (in_array($sort, ['pending', 'shipped', 'cancelled'])) {
             $recentOrders->where('status', $sort);
         }
-        $recentOrders = $recentOrders->latest()->with(['user','address'])->paginate(5);
+        $recentOrders = $recentOrders->latest()->with(['user','address'])->paginate(5)->fragment('main_orders');
         return view('index',[
             'users' => $users,
             'userWeekPercent' => $lastWeekUsersPercentage,

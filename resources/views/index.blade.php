@@ -543,7 +543,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="panel-body tabs-menu-body border-0 pt-0">
+                                            <div class="panel-body tabs-menu-body border-0 pt-0" id="main_orders">
                                                 @if(isset($recentOrders) && $recentOrders->count())
                                                     <div class="table-responsive">
                                                         <table class="table table-bordered text-nowrap mb-0" dir="rtl" id="order-table">
